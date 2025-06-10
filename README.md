@@ -83,7 +83,6 @@ Welcome! Follow these steps to submit your ROS2 induction package as a private s
 ## Notes & Best Practices
 
 - **Keep your induction package repository private** and only invite the admin and yourself as collaborators.
-- **Do not upload large files (like videos) directly.** Instead, upload videos to a cloud service (Google Drive, Dropbox, etc.) and include the share link in your package’s README.
 - To update your package, push changes to your own repo, then update the submodule pointer in the main repo and commit again.
 
 ---
@@ -98,4 +97,4 @@ Welcome! Follow these steps to submit your ROS2 induction package as a private s
 - If you encounter issues with GitHub authentication, ensure you are using a [Personal Access Token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) instead of your password.
 ---
 
-**Thank you! Wishing you the best of luck on your inductions!**
+**Thank you! Wishing you the best of luck!**
