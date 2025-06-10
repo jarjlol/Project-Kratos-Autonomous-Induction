@@ -1,132 +1,103 @@
-# Mars Rover Autonomous Subsystem Induction – Submission Instructions
+# Induction Submission Instructions (with Git Submodules)
 
-Welcome! Please follow these detailed steps to submit your ROS2 induction package to this repository. 
+Welcome! Follow these steps to submit your ROS2 induction package as a private submodule. This will ensure your code is only visible to you and the admins.
+
 ---
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Prerequisites](#prerequisites)
-- [Step 1: Clone the Repository](#step-1-clone-the-repository)
-- [Step 2: Create the `src/` Directory (If Needed)](#step-2-create-the-src-directory-if-needed)
-- [Step 3: Create Your Branch](#step-3-create-your-branch)
-- [Step 4: Copy Your ROS2 Package](#step-4-copy-your-ros2-package)
-- [Step 5: Add, Commit, and Push Your Changes](#step-5-add-commit-and-push-your-changes)
-- [Step 6: Add Documentation and Video Link](#step-6-add-documentation-and-video-link)
-- [Checklist Before Submission](#checklist-before-submission)
-- [Need Help?](#need-help)
+- [Step 1: Create Your Private Repository](#step-1-create-your-private-repository)
+- [Step 2: Add the Admin as a Collaborator](#step-2-add-the-admin-as-a-collaborator)
+- [Step 3: Add Your ROS2 Package to Your Repo](#step-3-add-your-ros2-package-to-your-repo)
+- [Step 4: Add Your Repo as a Submodule to the Main Induction Repo](#step-4-add-your-repo-as-a-submodule-to-the-main-induction-repo)
+- [Step 5: Notify the Admin](#step-5-notify-the-admin)
+- [Notes & Best Practices](#notes--best-practices)
+- [Troubleshooting](#troubleshooting)
 
 ---
 
-## Overview
+## Step 1: Create Your Private Repository
 
-You are required to:
-
-- Create your own branch in this repository.
-- Add your ROS2 package inside a `src/` directory.
-- Document your package and submit a demonstration video link.
-- Commit and push your changes for review.
+1. Go to [GitHub](https://github.com/) and create a **new private repository**.  
+   Suggested name: `induction-<your name>`
+2. Do **not** initialize with a README, .gitignore, or license (keep it empty).
 
 ---
 
-## Prerequisites
+## Step 2: Add the Admin as a Collaborator
 
-- A GitHub account with push access to this repository (contact a mentor if you need access).
-- Git installed on your computer.
-- Your ROS2 package ready in your local ROS2 workspace (typically `~/ros2_ws/src/<your_package_folder>`).
-
----
-
-## Step 1: Clone the Repository
-
-Open your terminal and run:
-```
-git clone https://github.com/jarjlol/Project-Kratos-Autonomous-Induction.git
-cd Project-Kratos-Autonomous-Induction
-```
----
-
-## Step 2: Create the `src/` Directory (If Needed)
-
-Check if a `src/` directory exists:
-```
-ls
-```
-
-If you **do not** see a `src/` folder, create one:
-
-```
-mkdir src
-```
+1. Go to your new private repository on GitHub.
+2. Click on **Settings**.
+3. In the left sidebar, click **Collaborators & teams** or **Manage access**.
+4. Click **Add people**.
+5. Enter the admin’s GitHub username: `jarjlol`, `Vishesh-Ag-BITSG`
+6. Click **Add** or **Invite**.
+7. Wait for the admin to accept the invitation before proceeding.
 
 ---
 
-## Step 3: Create Your Branch
-**If you are uploading your first induction task, you need to create your own branch, which you will use throughout the induction process.**
+## Step 3: Add Your ROS2 Package to Your Repo
 
-Replace `<yourname>` with your name:
-
-```
-git checkout -b induction-<yourname>
-```
-
-Push your branch to GitHub:
-
-```
-git push -u origin induction-<yourname>
-```
-
----
-
-## Step 4: Copy Your ROS2 Package
-
-Assuming your package is in `~/ros2_ws/src/<your_package_folder>`, copy it into the repo’s `src/` folder:
-
-```
-cp -r ~/ros2_ws/src/<your_package_folder> ./src/
-```
+1. Clone your private repository to your computer:
+   ```
+   git clone https://github.com//induction-<your name>.git
+   cd induction-<your name>
+   ```
+2. Copy your ROS2 package files into this directory.
+3. Add, commit, and push your code:
+   ```
+   git add .
+   git commit -m "Initial commit: Add my ROS2 induction package"
+   git push
+   ```
 
 ---
 
-## Step 5: Add, Commit, and Push Your Changes
+## Step 4: Add Your Repo as a Submodule to the Main Induction Repo
 
-Add your package to version control (refer Need Help section in case of error):
-
-```
-git add src/<your_package_folder>
-git commit -m "Add ROS2 induction package for <yourname>"
-git push
-```
-
----
-
-## Step 6: Add Documentation and Video Link
-
-1. **Inside your package folder (`src/<your_package_folder>`), create or update a `README.md` file.**
-   - Briefly describe what your package does.
-   - Give clear instructions on how to build and run your package.
-   - List any dependencies.
-   - **Include a link to your demonstration video** (upload your video to Google Drive, Dropbox, etc., and paste the share link in the README).
-
-   
-
----
-
-## Checklist Before Submission
-
-- [ ] Created a branch named `induction-<yourname>`
-- [ ] Added your ROS2 package to `src/`
-- [ ] Included a `README.md` in your package folder with instructions and video link
-- [ ] Committed and pushed all changes
+1. Clone the main induction repository (if you haven't already):
+   ```
+   git clone https://github.com//Project-Kratos-Autonomous-Induction.git
+   cd Project-Kratos-Autonomous-Induction
+   ```
+2. Make sure you’re on your own branch:
+   ```
+   git checkout -b induction-<your name>
+   ```
+3. Create the `src/` directory if it doesn't exist:
+   ```
+   mkdir -p src
+   ```
+4. Add your repository as a submodule inside the `src/` directory:
+   ```
+   git submodule add https://github.com//induction-.git src/induction-<your name>
+   ```
+5. Stage and commit the submodule addition:
+   ```
+   git add .gitmodules src/induction-<your name>
+   git commit -m "Add my induction package as a submodule"
+   git push --set-upstream origin induction-<your name>
+   ```
 
 ---
 
-## Need Help?
+## Notes & Best Practices
 
-- If you encounter issues with GitHub authentication, ensure you are using a [Personal Access Token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) instead of your password.
-- For Git or ROS2 questions, ask in the team’s communication channel or contact a mentor.
-- Refer to the [GitHub Docs](https://docs.github.com/) for more help.
+- **Keep your induction package repository private** and only invite the admin and yourself as collaborators.
+- **Do not upload large files (like videos) directly.** Instead, upload videos to a cloud service (Google Drive, Dropbox, etc.) and include the share link in your package’s README.
+- To update your package, push changes to your own repo, then update the submodule pointer in the main repo and commit again.
 
 ---
 
-**Good luck! We look forward to seeing your work.**
+## Troubleshooting
+
+- If you see an error about the submodule path already existing, make sure you are not duplicating submodule names.
+- If you forget to initialize submodules after cloning the main repo, run:
+  ```
+  git submodule update --init --recursive
+  ```
+- If you have permission issues, ensure you have invited the admin and that they have accepted the invitation.
+
+---
+
+**Thank you! Wishing you the best of luck on your inductions!**
