@@ -1,6 +1,6 @@
-# Induction Submission Instructions (with Git Submodules)
+# Induction Submission Instructions
 
-Welcome! Follow these steps to submit your ROS2 induction package as a private submodule. This will ensure your code is only visible to you and the admins.
+Welcome! Follow these steps to submit your ROS2 induction package as a private submodule.
 
 ---
 
@@ -54,12 +54,12 @@ Welcome! Follow these steps to submit your ROS2 induction package as a private s
 
 ## Step 4: Add Your Repo as a Submodule to the Main Induction Repo
 
-1. Clone the main induction repository (if you haven't already):
+1. Clone the main induction repository:
    ```
    git clone https://github.com/jarjlol/Project-Kratos-Autonomous-Induction.git
    cd Project-Kratos-Autonomous-Induction
    ```
-2. Make sure you’re on your own branch:
+2. Make sure you’re on your own branch (use the same branch throughout the induction. Make sure you type this branch name correctly):
    ```
    git checkout -b induction-<your name>
    ```
@@ -95,8 +95,7 @@ Welcome! Follow these steps to submit your ROS2 induction package as a private s
   ```
   git submodule update --init --recursive
   ```
-- If you have permission issues, ensure you have invited the admin and that they have accepted the invitation.
-
+- If you encounter issues with GitHub authentication, ensure you are using a [Personal Access Token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) instead of your password.
 ---
 
 **Thank you! Wishing you the best of luck on your inductions!**
