@@ -39,7 +39,7 @@ Welcome! Follow these steps to submit your ROS2 induction package as a private s
 
 1. Clone your private repository to your computer:
    ```
-   git clone https://github.com//induction-<your name>.git
+   git clone https://github.com/<your GitHub username>/induction-<your name>.git
    cd induction-<your name>
    ```
 2. Copy your ROS2 package files into this directory.
