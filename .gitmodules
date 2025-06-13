@@ -1,0 +1,3 @@
+[submodule "src/induction-test-2"]
+	path = src/induction-test-2
+	url = https://github.com/jarjlol/induction-test-2.git
