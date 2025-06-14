@@ -29,7 +29,7 @@ Welcome! Follow these steps to submit your ROS2 induction package as a private s
 2. Click on **Settings**.
 3. In the left sidebar, click **Collaborators & teams** or **Manage access**.
 4. Click **Add people**.
-5. Enter the admin’s GitHub username: `jarjlol`, `Vishesh-Ag-BITSG`
+5. Enter the admin’s GitHub username: `jarjlol`, `Vishesh-Ag-BITSG`, `souhhmm`
 6. Click **Add** or **Invite**.
 7. Wait for the admin to accept the invitation before proceeding.
 
